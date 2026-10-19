@@ -1,15 +1,20 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beranda | Website Ormawa</title>
+    <title>Kontak | Website Ormawa</title>
+
+    <!-- Menghubungkan file CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!--Navbar-->
+
+    <!-- Navbar -->
     <header class="navbar">
         <h1 class="logo">Website Ormawa</h1>
+
         <nav>
             <ul class="menu">
                 <li><a href="index.html">Beranda</a></li>
@@ -18,21 +23,259 @@
                 <li><a href="kontak.html">Kontak</a></li>
             </ul>
         </nav>
+
         <button id="tombol-tema" type="button">Mode Gelap</button>
     </header>
 
-
-    <!--Konten Utama-->
+    <!-- Konten Utama -->
     <main>
-        <h2>Beranda</h2>
-        <!--Isi halaman dikerjakan oleh anggota yang bertugas-->
+
+        <h2>Kontak dan Pendaftaran Ormawa</h2>
+
+        <p>
+            Silakan isi formulir berikut jika kamu berminat
+            bergabung dengan organisasi mahasiswa.
+        </p>
+
+        <!-- Informasi Kontak -->
+        <section class="informasi-kontak">
+            <h3>Informasi Kontak Ormawa</h3>
+
+            <p>
+                <strong>Nama:</strong>
+                Ormawa Politeknik Negeri Cilacap
+            </p>
+
+            <p>
+                <strong>Email:</strong>
+                Hubungi bagian kemahasiswaan kampus
+            </p>
+
+            <p>
+                <strong>Alamat:</strong>
+                Politeknik Negeri Cilacap
+            </p>
+
+            <p>
+                <strong>Jam Pelayanan:</strong>
+                Senin–Jumat, 08.00–15.00 WIB
+            </p>
+        </section>
+
+        <!-- Formulir Minat Bergabung -->
+        <section class="form-pendaftaran">
+            <h3>Formulir Minat Bergabung</h3>
+
+            <p>
+                Lengkapi data diri dan pilih organisasi
+                yang ingin kamu ikuti.
+            </p>
+
+            <form id="formOrmawa">
+
+                <!-- Nama -->
+                <div class="form-group">
+                    <label for="nama">Nama Lengkap</label>
+
+                    <input
+                        type="text"
+                        id="nama"
+                        name="nama"
+                        placeholder="Masukkan nama lengkap"
+                        required
+                    >
+                </div>
+
+                <!-- NIM -->
+                <div class="form-group">
+                    <label for="nim">NIM</label>
+
+                    <input
+                        type="text"
+                        id="nim"
+                        name="nim"
+                        placeholder="Masukkan NIM"
+                        inputmode="numeric"
+                        required
+                    >
+                </div>
+
+                <!-- Program Studi -->
+                <div class="form-group">
+                    <label for="prodi">Program Studi</label>
+
+                    <select id="prodi" name="prodi" required>
+                        <option value="">-- Pilih Program Studi --</option>
+                        <option value="D3 Teknik Informatika">
+                            D3 Teknik Informatika
+                        </option>
+                        <option value="D3 Teknik Elektronika">
+                            D3 Teknik Elektronika
+                        </option>
+                        <option value="D3 Teknik Mesin">
+                            D3 Teknik Mesin
+                        </option>
+                        <option value="Program Studi Lain">
+                            Program Studi Lain
+                        </option>
+                    </select>
+                </div>
+
+                <!-- Organisasi -->
+                <div class="form-group">
+                    <label for="organisasi">Organisasi Pilihan</label>
+
+                    <select id="organisasi" name="organisasi" required>
+                        <option value="">-- Pilih Organisasi --</option>
+                        <option value="BEM">BEM</option>
+                        <option value="BPM">BPM</option>
+                        <option value="Himpunan Mahasiswa">
+                            Himpunan Mahasiswa
+                        </option>
+                        <option value="UKM Olahraga">
+                            UKM Olahraga
+                        </option>
+                        <option value="UKM Seni">
+                            UKM Seni
+                        </option>
+                    </select>
+                </div>
+
+                <!-- Tombol Kirim -->
+                <button type="submit">
+                    Kirim Pendaftaran
+                </button>
+
+                <!-- Pesan Validasi -->
+                <p
+                    id="pesan-validasi"
+                    role="status"
+                    aria-live="polite"
+                ></p>
+
+            </form>
+        </section>
+
+        <!-- Ringkasan Pendaftaran -->
+        <section
+            id="hasil-pendaftaran"
+            class="informasi-kontak"
+            hidden
+        >
+            <h3>Pendaftaran Berhasil Divalidasi</h3>
+
+            <p>
+                Terima kasih telah mengisi formulir minat
+                bergabung dengan Ormawa.
+            </p>
+
+            <p><strong>Nama:</strong> <span id="hasil-nama"></span></p>
+
+            <p><strong>NIM:</strong> <span id="hasil-nim"></span></p>
+
+            <p>
+                <strong>Program Studi:</strong>
+                <span id="hasil-prodi"></span>
+            </p>
+
+            <p>
+                <strong>Organisasi Pilihan:</strong>
+                <span id="hasil-organisasi"></span>
+            </p>
+
+            <p>
+                <em>
+                    Catatan: Data ini hanya ditampilkan di halaman
+                    dan belum dikirim kepada pengurus Ormawa.
+                </em>
+            </p>
+
+            <button id="tombol-kembali" type="button">
+                Kembali ke Formulir
+            </button>
+        </section>
+
     </main>
 
-    <!--Footer-->
+    <!-- Footer -->
     <footer>
         <p>&copy; 2026 Ormawa Politeknik Negeri Cilacap</p>
     </footer>
 
+    <!-- Validasi dan Tampilan Hasil -->
+    <script>
+        const form = document.getElementById("formOrmawa");
+        const pesan = document.getElementById("pesan-validasi");
+        const hasil = document.getElementById("hasil-pendaftaran");
+        const tombolKembali = document.getElementById("tombol-kembali");
+
+        form.addEventListener("submit", function(event) {
+
+            // Mencegah halaman dimuat ulang
+            event.preventDefault();
+
+            // Mengambil data formulir
+            const nama = document.getElementById("nama").value.trim();
+            const nim = document.getElementById("nim").value.trim();
+            const prodi = document.getElementById("prodi").value;
+            const organisasi = document.getElementById("organisasi").value;
+
+            // Memeriksa apakah semua kolom terisi
+            if (
+                nama === "" ||
+                nim === "" ||
+                prodi === "" ||
+                organisasi === ""
+            ) {
+                pesan.textContent = "Semua kolom wajib diisi!";
+                pesan.style.color = "red";
+                return;
+            }
+
+            // Memeriksa NIM hanya berisi angka
+            if (!/^[0-9]+$/.test(nim)) {
+                pesan.textContent = "NIM harus berupa angka!";
+                pesan.style.color = "red";
+                return;
+            }
+
+            // Menampilkan data pada ringkasan
+            document.getElementById("hasil-nama").textContent = nama;
+            document.getElementById("hasil-nim").textContent = nim;
+            document.getElementById("hasil-prodi").textContent = prodi;
+            document.getElementById("hasil-organisasi").textContent = organisasi;
+
+            // Menampilkan pesan berhasil
+            pesan.textContent = "Data berhasil divalidasi!";
+            pesan.style.color = "green";
+
+            // Menampilkan hasil pendaftaran
+            hasil.hidden = false;
+
+            // Mengarahkan tampilan ke ringkasan
+            hasil.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
+        });
+
+        // Tombol untuk kembali mengisi formulir
+        tombolKembali.addEventListener("click", function() {
+
+            hasil.hidden = true;
+            form.reset();
+
+            pesan.textContent = "";
+
+            form.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
+        });
+    </script>
+
+    <!-- File JavaScript utama, misalnya untuk mode gelap -->
     <script src="js/script.js"></script>
+
 </body>
 </html>

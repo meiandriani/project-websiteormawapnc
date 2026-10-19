@@ -70,3 +70,224 @@ body.gelap .card { background-color: #1c2538; border-color: #33415c;}
 
 /*===BAGIAN MAHASISWA 2 (Kontak dan Pendaftaran )===*/
 
+/*===BAGIAN MAHASISWA 2 (Kontak dan Pendaftaran )===*/
+
+/* Judul halaman kontak */
+main > h2 {
+    color: #162342;
+    font-size: 28px;
+    margin-bottom: 12px;
+}
+
+/* Paragraf pembuka */
+main > p {
+    margin-bottom: 24px;
+    color: #555;
+}
+
+/* Informasi kontak dan ringkasan pendaftaran */
+.informasi-kontak {
+    background-color: white;
+    border: 1px solid #d5dbea;
+    border-left: 5px solid #162342;
+    border-radius: 8px;
+    padding: 24px;
+    margin-bottom: 24px;
+    box-shadow: 0 3px 8px rgba(22, 35, 66, 0.08);
+}
+
+.informasi-kontak h3 {
+    color: #162342;
+    font-size: 21px;
+    margin-bottom: 14px;
+}
+
+.informasi-kontak p {
+    margin-bottom: 10px;
+    overflow-wrap: anywhere;
+}
+
+.informasi-kontak strong {
+    color: #162342;
+}
+
+/* Formulir pendaftaran */
+.form-pendaftaran {
+    background-color: white;
+    border: 1px solid #d5dbea;
+    border-radius: 8px;
+    padding: 24px;
+    margin-bottom: 24px;
+    box-shadow: 0 3px 8px rgba(22, 35, 66, 0.08);
+}
+
+.form-pendaftaran h3 {
+    color: #162342;
+    font-size: 21px;
+    margin-bottom: 8px;
+}
+
+.form-pendaftaran > p {
+    margin-bottom: 20px;
+    color: #555;
+}
+
+/* Kelompok input */
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 7px;
+    color: #141821;
+}
+
+/* Input nama, NIM, dan pilihan */
+.form-group input,
+.form-group select {
+    display: block;
+    width: 100%;
+    padding: 11px 12px;
+    border: 1px solid #cbd2df;
+    border-radius: 6px;
+    background-color: white;
+    color: #141821;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+}
+
+/* Efek saat kolom dipilih */
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #315a9c;
+    box-shadow: 0 0 0 3px rgba(49, 90, 156, 0.15);
+}
+
+/* Tombol kirim dan tombol kembali */
+.form-pendaftaran button,
+#tombol-kembali {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    background-color: #162342;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.form-pendaftaran button:hover,
+#tombol-kembali:hover {
+    background-color: #2b4575;
+}
+
+/* Pesan validasi JavaScript */
+#pesan-validasi {
+    margin-top: 14px;
+    margin-bottom: 0;
+    text-align: center;
+    font-weight: bold;
+    overflow-wrap: anywhere;
+}
+
+/* Ringkasan hasil pendaftaran */
+#hasil-pendaftaran {
+    border-left-color: #23864a;
+    margin-top: 24px;
+}
+
+#hasil-pendaftaran h3 {
+    color: #23864a;
+}
+
+#hasil-pendaftaran p:last-of-type {
+    margin-top: 14px;
+    font-size: 14px;
+}
+
+/* Memastikan hasil tersembunyi sebelum formulir dikirim */
+[hidden] {
+    display: none !important;
+}
+
+/* Mode gelap untuk bagian kontak */
+body.gelap main > h2 {
+    color: #a9c7ff;
+}
+
+body.gelap main > p {
+    color: #d0d5df;
+}
+
+body.gelap .informasi-kontak,
+body.gelap .form-pendaftaran {
+    background-color: #1c2538;
+    color: #e8e8e8;
+    border-color: #33415c;
+}
+
+body.gelap .informasi-kontak h3,
+body.gelap .informasi-kontak strong,
+body.gelap .form-pendaftaran h3,
+body.gelap .form-group label {
+    color: #e8e8e8;
+}
+
+body.gelap .form-pendaftaran > p {
+    color: #c5ccda;
+}
+
+body.gelap .form-group input,
+body.gelap .form-group select {
+    background-color: #121826;
+    color: #e8e8e8;
+    border-color: #46536d;
+}
+
+body.gelap .form-group input::placeholder {
+    color: #aab3c4;
+}
+
+body.gelap .form-group input:focus,
+body.gelap .form-group select:focus {
+    border-color: #a9c7ff;
+}
+
+body.gelap #hasil-pendaftaran h3 {
+    color: #86e3a4;
+}
+
+/* Tampilan HP */
+@media (max-width: 600px) {
+    main > h2 {
+        font-size: 23px;
+    }
+
+    .informasi-kontak,
+    .form-pendaftaran {
+        padding: 18px;
+    }
+
+    .informasi-kontak h3,
+    .form-pendaftaran h3 {
+        font-size: 19px;
+    }
+
+    .form-group input,
+    .form-group select {
+        font-size: 14px;
+    }
+
+    .form-pendaftaran button,
+    #tombol-kembali {
+        padding: 11px;
+    }
+}
+
+
