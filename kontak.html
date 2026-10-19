@@ -24,12 +24,13 @@
             </ul>
         </nav>
 
-        <button id="tombol-tema" type="button">Mode Gelap</button>
+        <button id="tombol-tema" type="button">
+            Mode Gelap
+        </button>
     </header>
 
     <!-- Konten Utama -->
     <main>
-
         <h2>Kontak dan Pendaftaran Ormawa</h2>
 
         <p>
@@ -72,11 +73,8 @@
             </p>
 
             <form id="formOrmawa">
-
-                <!-- Nama -->
                 <div class="form-group">
                     <label for="nama">Nama Lengkap</label>
-
                     <input
                         type="text"
                         id="nama"
@@ -86,10 +84,8 @@
                     >
                 </div>
 
-                <!-- NIM -->
                 <div class="form-group">
                     <label for="nim">NIM</label>
-
                     <input
                         type="text"
                         id="nim"
@@ -100,10 +96,8 @@
                     >
                 </div>
 
-                <!-- Program Studi -->
                 <div class="form-group">
                     <label for="prodi">Program Studi</label>
-
                     <select id="prodi" name="prodi" required>
                         <option value="">-- Pilih Program Studi --</option>
                         <option value="D3 Teknik Informatika">
@@ -121,10 +115,8 @@
                     </select>
                 </div>
 
-                <!-- Organisasi -->
                 <div class="form-group">
                     <label for="organisasi">Organisasi Pilihan</label>
-
                     <select id="organisasi" name="organisasi" required>
                         <option value="">-- Pilih Organisasi --</option>
                         <option value="BEM">BEM</option>
@@ -141,18 +133,13 @@
                     </select>
                 </div>
 
-                <!-- Tombol Kirim -->
-                <button type="submit">
-                    Kirim Pendaftaran
-                </button>
+                <button type="submit">Kirim Pendaftaran</button>
 
-                <!-- Pesan Validasi -->
                 <p
                     id="pesan-validasi"
                     role="status"
                     aria-live="polite"
                 ></p>
-
             </form>
         </section>
 
@@ -170,14 +157,11 @@
             </p>
 
             <p><strong>Nama:</strong> <span id="hasil-nama"></span></p>
-
             <p><strong>NIM:</strong> <span id="hasil-nim"></span></p>
-
             <p>
                 <strong>Program Studi:</strong>
                 <span id="hasil-prodi"></span>
             </p>
-
             <p>
                 <strong>Organisasi Pilihan:</strong>
                 <span id="hasil-organisasi"></span>
@@ -194,7 +178,6 @@
                 Kembali ke Formulir
             </button>
         </section>
-
     </main>
 
     <!-- Footer -->
@@ -202,79 +185,7 @@
         <p>&copy; 2026 Ormawa Politeknik Negeri Cilacap</p>
     </footer>
 
-    <!-- Validasi dan Tampilan Hasil -->
-    <script>
-        const form = document.getElementById("formOrmawa");
-        const pesan = document.getElementById("pesan-validasi");
-        const hasil = document.getElementById("hasil-pendaftaran");
-        const tombolKembali = document.getElementById("tombol-kembali");
-
-        form.addEventListener("submit", function(event) {
-
-            // Mencegah halaman dimuat ulang
-            event.preventDefault();
-
-            // Mengambil data formulir
-            const nama = document.getElementById("nama").value.trim();
-            const nim = document.getElementById("nim").value.trim();
-            const prodi = document.getElementById("prodi").value;
-            const organisasi = document.getElementById("organisasi").value;
-
-            // Memeriksa apakah semua kolom terisi
-            if (
-                nama === "" ||
-                nim === "" ||
-                prodi === "" ||
-                organisasi === ""
-            ) {
-                pesan.textContent = "Semua kolom wajib diisi!";
-                pesan.style.color = "red";
-                return;
-            }
-
-            // Memeriksa NIM hanya berisi angka
-            if (!/^[0-9]+$/.test(nim)) {
-                pesan.textContent = "NIM harus berupa angka!";
-                pesan.style.color = "red";
-                return;
-            }
-
-            // Menampilkan data pada ringkasan
-            document.getElementById("hasil-nama").textContent = nama;
-            document.getElementById("hasil-nim").textContent = nim;
-            document.getElementById("hasil-prodi").textContent = prodi;
-            document.getElementById("hasil-organisasi").textContent = organisasi;
-
-            // Menampilkan pesan berhasil
-            pesan.textContent = "Data berhasil divalidasi!";
-            pesan.style.color = "green";
-
-            // Menampilkan hasil pendaftaran
-            hasil.hidden = false;
-
-            // Mengarahkan tampilan ke ringkasan
-            hasil.scrollIntoView({
-                behavior: "smooth",
-                block: "start"
-            });
-        });
-
-        // Tombol untuk kembali mengisi formulir
-        tombolKembali.addEventListener("click", function() {
-
-            hasil.hidden = true;
-            form.reset();
-
-            pesan.textContent = "";
-
-            form.scrollIntoView({
-                behavior: "smooth",
-                block: "start"
-            });
-        });
-    </script>
-
-    <!-- File JavaScript utama, misalnya untuk mode gelap -->
+    <!-- Menghubungkan file JavaScript -->
     <script src="js/script.js"></script>
 
 </body>
