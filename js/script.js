@@ -16,6 +16,18 @@ if (tombolTema) {
 /*===BAGIAN MAHASISWA (Beranda)===*/
 
 /*===BAGIAN MAHASISWA (Profil)===*/
+const tombolBaca = document.getElementById("tombol-baca");
+const teksTambahan = document.getElementById("teks-tambahan");
+
+if (tombolBaca && teksTambahan) {
+    tombolBaca.addEventListener("click", function () {
+        teksTambahan.hidden = !teksTambahan.hidden;
+
+        tombolBaca.textContent = teksTambahan.hidden
+            ? "Baca Selengkapnya"
+            : "Tutup";
+    });
+}
 
 /*===BAGIAN MAHASISWA (Kegiatan)===*/
 
