@@ -9,6 +9,7 @@ body {
 
 /* == BAGIAN UMUM ==*/
 .navbar {
+    object-fit: contain;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -18,6 +19,7 @@ body {
     background-color: #162342;
     color: white;
 }
+
 .logo { font-size: 22px;}
 .menu { display: flex; gap: 24px; list-style: none;}
 .menu a {color: white; text-decoration: none;}
@@ -513,4 +515,202 @@ body.gelap #hasil-pendaftaran h3 {
     }
 }
 
+/* Beranda */
+.beranda-page {
+    background-color: #f4f6f9;
+    color: #333;
+}
 
+.beranda-page header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    padding: 15px 30px;
+    background-color: #1d2a44;
+    color: white;
+}
+
+.beranda-page .brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.beranda-page .brand-logo-img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+.beranda-page .brand h1 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.beranda-page nav a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s;
+}
+
+.beranda-page nav a[aria-current="page"],
+.beranda-page nav a:hover {
+    color: white;
+    font-weight: bold;
+}
+
+.beranda-page .container {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 0 15px;
+}
+
+.beranda-page .hero {
+    margin-bottom: 30px;
+    padding: 40px 25px;
+    border: 1px solid #e1e4e8;
+    border-radius: 8px;
+    background: white;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.beranda-page .hero h2 {
+    margin-bottom: 12px;
+    color: #1d2a44;
+    font-size: 24px;
+}
+
+.beranda-page .hero p {
+    max-width: 700px;
+    margin: 0 auto 25px;
+    color: #555;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.beranda-page .btn-primary {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 5px;
+    background-color: #1d2a44;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background 0.2s ease;
+}
+
+.beranda-page .btn-primary:hover {
+    background-color: #2b3d60;
+}
+
+.beranda-page .section-title {
+    margin-bottom: 15px;
+    color: #1d2a44;
+    font-size: 18px;
+}
+
+.beranda-page .kegiatan-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.beranda-page .kegiatan-card {
+    overflow: hidden;
+    border: 1px solid #e1e4e8;
+    border-radius: 8px;
+    background: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+.beranda-page .kegiatan-img {
+    display: flex;
+    width: 100%;
+    height: 150px;
+    align-items: center;
+    justify-content: center;
+    background-color: #d1d5db;
+    color: #6b7280;
+    font-size: 13px;
+}
+
+.beranda-page .kegiatan-body {
+    padding: 15px;
+}
+
+.beranda-page .kegiatan-date {
+    margin-bottom: 5px;
+    color: #888;
+    font-size: 12px;
+}
+
+.beranda-page .kegiatan-card h4 {
+    margin-bottom: 8px;
+    color: #1d2a44;
+    font-size: 16px;
+}
+
+.beranda-page .kegiatan-card p {
+    color: #666;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+.beranda-page #tombol-tema {
+    padding: 8px 14px;
+    border: none;
+    border-radius: 6px;
+    background-color: white;
+    color: #1f3864;
+    cursor: pointer;
+}
+
+.beranda-page footer {
+    margin-top: 40px;
+    padding: 20px;
+    border-top: 1px solid #ddd;
+    background-color: #1d2a44;
+    color: white;
+    text-align: center;
+    font-size: 12px;
+}
+
+body.gelap.beranda-page {
+    background-color: #121826;
+    color: #e8e8e8;
+}
+
+body.gelap.beranda-page .hero,
+body.gelap.beranda-page .kegiatan-card {
+    border-color: #33415c;
+    background-color: #1c2538;
+}
+
+body.gelap.beranda-page .hero h2,
+body.gelap.beranda-page .section-title,
+body.gelap.beranda-page .kegiatan-card h4 {
+    color: #c8d7ff;
+}
+
+body.gelap.beranda-page .hero p,
+body.gelap.beranda-page .kegiatan-card p {
+    color: #d0d5df;
+}
+
+@media (max-width: 700px) {
+    .beranda-page header {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .beranda-page .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 14px;
+    }
+}

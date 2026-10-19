@@ -1,18 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beranda | Website Ormawa</title>
+    <title>Beranda - Ormawa Politeknik Negeri Cilacap</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-    <!--Navbar-->
-    <header class="navbar">
-        <h1 class="logo">Website Ormawa</h1>
-        <nav>
+<body class="beranda-page">
+    <header>
+        <div class="brand">
+            <img src="images/logoPNC-removebg-preview.png" alt="Logo PNC" class="brand-logo-img">
+            <h1>Ormawa Politeknik Negeri Cilacap</h1>
+        </div>
+        <nav aria-label="Navigasi utama">
             <ul class="menu">
-                <li><a href="index.html">Beranda</a></li>
+                <li><a href="index.html" aria-current="page">Beranda</a></li>
                 <li><a href="profil.html">Profil</a></li>
                 <li><a href="kegiatan.html">Kegiatan</a></li>
                 <li><a href="kontak.html">Kontak</a></li>
@@ -21,16 +23,50 @@
         <button id="tombol-tema" type="button">Mode Gelap</button>
     </header>
 
+    <main class="container">
+        <section class="hero">
+            <h2>Selamat Datang di Portal Resmi Ormawa PNC</h2>
+            <p>
+                Selamat datang di portal informasi Organisasi Mahasiswa Politeknik Negeri Cilacap.
+                Wadah resmi bagi seluruh mahasiswa untuk mengekspresikan bakat, mengembangkan jiwa
+                kepemimpinan, dan berkontribusi aktif dalam berbagai kegiatan kemahasiswaan di lingkungan kampus.
+            </p>
+            <a href="profil.html" class="btn-primary">Lihat Organisasi</a>
+        </section>
 
-    <!--Konten Utama-->
-    <main>
-        <h2>Beranda</h2>
-        <!--Isi halaman dikerjakan oleh anggota yang bertugas-->
+        <section aria-labelledby="judul-kegiatan">
+            <h3 class="section-title" id="judul-kegiatan">Informasi Kegiatan Terbaru</h3>
+            <div class="kegiatan-grid">
+                <article class="kegiatan-card">
+                    <div class="kegiatan-img">[ FOTO KEGIATAN 1 ]</div>
+                    <div class="kegiatan-body">
+                        <div class="kegiatan-date">25 Januari 2026</div>
+                        <h4>Seminar Kepemimpinan Mahasiswa</h4>
+                        <p>Pelatihan dasar kepemimpinan bagi pengurus baru Ormawa Politeknik Negeri Cilacap.</p>
+                    </div>
+                </article>
+                <article class="kegiatan-card">
+                    <div class="kegiatan-img">[ FOTO KEGIATAN 2 ]</div>
+                    <div class="kegiatan-body">
+                        <div class="kegiatan-date">10 Februari 2026</div>
+                        <h4>Bakti Sosial dan Pengabdian Masyarakat</h4>
+                        <p>Aksi kepedulian sosial mahasiswa PNC kepada masyarakat sekitar wilayah Cilacap.</p>
+                    </div>
+                </article>
+                <article class="kegiatan-card">
+                    <div class="kegiatan-img">[ FOTO KEGIATAN 3 ]</div>
+                    <div class="kegiatan-body">
+                        <div class="kegiatan-date">05 Maret 2026</div>
+                        <h4>Pentas Seni dan Gelar Budaya Kampus</h4>
+                        <p>Ajang penampilan karya seni dan budaya dari seluruh Unit Kegiatan Mahasiswa (UKM).</p>
+                    </div>
+                </article>
+            </div>
+        </section>
     </main>
 
-    <!--Footer-->
     <footer>
-        <p>&copy; 2026 Ormawa Politeknik Negeri Cilacap</p>
+        <p>&copy; 2026 Ormawa Politeknik Negeri Cilacap.</p>
     </footer>
 
     <script src="js/script.js"></script>

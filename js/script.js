@@ -118,4 +118,15 @@ if (form && pesan && hasil && tombolKembali) {
     });
 }
 
+// Interaksi khusus beranda
+document.addEventListener("DOMContentLoaded", function () {
+    console.log("Portal Ormawa PNC Berhasil Dimuat.");
+
+    const heroTitle = document.querySelector(".hero h2");
+    if (heroTitle) {
+        heroTitle.addEventListener("click", function () {
+            alert("Selamat datang di Portal Resmi Ormawa PNC!");
+        });
+    }
+});
 
