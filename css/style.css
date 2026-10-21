@@ -639,6 +639,11 @@ body.gelap #hasil-pendaftaran h3 {
     font-size: 13px;
 }
 
+.beranda-page img.kegiatan-img {
+    display: block;
+    object-fit: cover;
+}
+
 .beranda-page .kegiatan-body {
     padding: 15px;
 }
